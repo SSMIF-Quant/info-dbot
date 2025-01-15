@@ -1,0 +1,8 @@
+services:
+  authbot:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    environment:
+      dtoken: ${dtoken}
