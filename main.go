@@ -75,16 +75,16 @@ func loop() {
 }
 
 func runUpdates() {
-	update("SP&500", "GSPC", "1329033384378503198")
-	update("DJI", "DJI", "1329036261553340426")
-	update("VIX", "VIX", "1329036335037681715")
-	update("5Year", "FVX", "1329036378637340673")
-	update("FTSE100", "FTSC", "1329036854783381534")
-	update("NASDAQ", "IXIC", "1329036890275577856")
+	update("SP&500", "%5EGSPC", "1329333257833283615")
+	update("DJI", "%5EDJI", "1329333509034344519")
+	update("VIX", "%5EVIX", "1329333523584389181")
+	update("5Year", "%5EFVX", "1329333534787113042")
+	update("FTSE100", "%5EFTSC", "1329333729532837889")
+	update("NASDAQ", "%5EIXIC", "1329333744410038332")
 }
 
 func update(name string, ticker string, channel string) {
-	url := "https://query2.finance.yahoo.com/v8/finance/chart/%5E" + ticker
+	url := "https://query2.finance.yahoo.com/v8/finance/chart/" + ticker
 
 	resp, err := http.Get(url)
 	if err != nil {
