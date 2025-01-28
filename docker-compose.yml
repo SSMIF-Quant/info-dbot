@@ -4,5 +4,7 @@ services:
       dockerfile: Dockerfile
       context: .
     restart: always
+    env_file:
+      - path: /root/docker.env
     environment:
-      dtoken: ${dtoken}
+      dtoken: ${info_dbot_dtoken}
